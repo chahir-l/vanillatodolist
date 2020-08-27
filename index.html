@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul></ul>
+    </div>
+    <input type="text" name="note" />
+    <button class="add-note">ajouter note</button>
+    <script>
+        let add = document.querySelector('.add-note');
+        add.addEventListener('click', function(){
+            let champs = document.querySelector('input[name="note"]').value; 
+            alert(champs)
+            document.prepend('ul li').innerHTML = champs;
+        })
+    </script>
+</body>
+</html>
