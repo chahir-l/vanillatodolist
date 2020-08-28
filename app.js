@@ -1,9 +1,13 @@
 const add = document.querySelector('.add-note');
-const deleteNoteElt = document.querySelector('.delete-note');
 
 add.addEventListener('click', addNote)
-deleteNoteElt.addEventListener('click', deleteNote.bind(this))
-
+document.addEventListener('click', function(evt){
+    item = evt.target;
+   if( item.classList[0] == 'delete-note'){
+        item.parentElement.remove();
+   }
+})
+ 
 function addNote()
 {
     const noteValue = document.querySelector('input[name="note"]').value; 
@@ -17,9 +21,8 @@ function addNote()
     newLi.appendChild(liContent) 
     newLi.appendChild(btnDelNote)
     document.querySelector('.elements').appendChild( newLi );
-}
+   
 
-function deleteNote(elt)
-{
-    elt.remove()
 }
+ 
+ 
