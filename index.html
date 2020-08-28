@@ -6,18 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <ul></ul>
-    </div>
+ 
     <input type="text" name="note" />
     <button class="add-note">ajouter note</button>
-    <script>
-        let add = document.querySelector('.add-note');
-        add.addEventListener('click', function(){
-            let champs = document.querySelector('input[name="note"]').value; 
-            alert(champs)
-            document.prepend('ul li').innerHTML = champs;
-        })
-    </script>
+    <div class="note-list"><ul class="elements"></ul></div>
 </body>
 </html>
